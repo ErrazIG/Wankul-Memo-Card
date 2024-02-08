@@ -101,6 +101,6 @@ function startGame() {
         shuffleAndReplaceChildren('.flip-card');
     });
 
-    //shuffleAndReplaceChildren('.flip-card');
+    shuffleAndReplaceChildren('.flip-card');
 };
 startGame();
