@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(58, 119, 250);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 8;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(58, 119, 250);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  user-select: none;
+}
+
+section .flex {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(58, 119, 250);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  user-select: none;
+}
+
+section p {
+  font-size: 10rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+main .cards {
+  position: absolute;
+  width: 750px;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+  flex-flow: row wrap;
+  padding: 1.5rem 0;
+}
+
+main .no-play {
+  display: none;
+}
+
+main .no-play.forbidden {
+  position: absolute;
+  width: 750px;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+  flex-flow: row wrap;
+  padding: 1.5rem 0;
+}
+
+.flip-card-front img,
+.flip-card-back img {
+  width: 150px;
+  height: auto;
+}
+
+main button {
+  position: absolute;
+  bottom: 1.5rem;
+  width: 12rem;
+  height: 3rem;
+  background-color: rgb(255, 217, 0);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.25rem;
+  border: none;
+  user-select: none;
+  z-index: 9;
+}
+
+main button:active {
+  transform: scale(.98);
+  transition: transform .08s ease;
+}
+
+.flip-card {
+  perspective: 100px;
+  width: 150px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  margin: 2ch;
+}
+
+.flip-card p {
+  display: none;
+}
+
+.flip-card.is-flipped {
+  transform: rotateY(180deg);
+  transition: transform 0.5s ease;
+}
+
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.flip-card-front,
+.flip-card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flip-card-front {
+  transform: rotateY(180deg);
+}
